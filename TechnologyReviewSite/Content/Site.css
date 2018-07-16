@@ -59,9 +59,9 @@ textarea {
 #categoryIndex {
     background-color: grey;
 }
-nav{
+#nav{
     background-color:black;
 }
-.jumbotron{
-    background-color:darkred;
+#jumbotron{
+    background-color:black;
 }
