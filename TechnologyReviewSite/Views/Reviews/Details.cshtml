@@ -1,0 +1,92 @@
+﻿@model TechnologyReviewSite.Models.Review
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Review</h2>
+@*added card*@
+<div class="card">
+
+    <img src="~/images/samsung-galaxy-s9-plus-g965fd-dual-sim-4g-incajd.jpg" id="card"  alt="Avatar" @*style="width:100%"*@>
+    <div class="container">
+        <h4><b>Samsung Galaxy S9</b></h4>
+        <p>S9 Review</p>
+    </div>
+</div>
+
+<div class="card">
+
+    <img src="~/images/iphone-x-photo.jpg" id="card" alt="Avatar" @*style="width:100%"*@>
+    <div class="container">
+        <h4><b>Apple Iphone X</b></h4>
+        <p>Iphone X Review</p>
+    </div>
+</div>
+
+<div class="card">
+
+
+    <img src="~/images/hero-G7-discover.png" id="card" alt="Avatar" @*style="width:100%"*@>
+    <div class="container">
+        <h4><b>LG G7</b></h4>
+        <p>G7 Review</p>
+    </div>
+</div>
+<h2>Details</h2>
+@**@
+<div>
+    <h4>Review</h4>
+    <hr />
+    <div class="container" id="reviewDetails">
+        <div class="row">
+            <div class="col">
+                @Html.DisplayNameFor(model => model.Category.Brand)
+            </div>
+
+            <div class="col">
+                @Html.DisplayNameFor(model => model.Title)
+            </div>
+
+            <div class="col">
+                @Html.DisplayNameFor(model => model.Content)
+            </div>
+
+            <div class="col">
+                @Html.DisplayNameFor(model => model.DatePublished)
+            </div>
+
+            <div class="col">
+                @Html.DisplayNameFor(model => model.Author)
+            </div>            
+
+        </div>
+        <div class="row">
+            <div class="col">
+                @Html.DisplayFor(model => model.Category.Brand)
+            </div>
+
+            <div class="col">
+                @Html.DisplayFor(model => model.Title)
+            </div>
+
+            <div class="col">
+                @Html.DisplayFor(model => model.Content)
+            </div>
+
+            <div class="col">
+                @Html.DisplayFor(model => model.DatePublished)
+            </div>
+
+            <div class="col">
+                @Html.DisplayFor(model => model.Author)
+            </div>
+        </div>
+    </div>
+    
+</div>
+made buttons
+<p>
+    <button class="button" id="edit">@Html.ActionLink("Edit", "Edit", new { id = Model.ID })</button>
+    <button class="button" id="backToList">@Html.ActionLink("Back to List", "Index")</button>
+</p>

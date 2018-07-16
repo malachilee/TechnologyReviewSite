@@ -1,0 +1,51 @@
+﻿@model IEnumerable<TechnologyReviewSite.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Categories</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="container" id="categoryIndex">
+    <div class="row">
+        <div class="col">
+            @Html.DisplayNameFor(model => model.Brand)
+        </div>
+        <div class="col">
+            @Html.DisplayNameFor(model => model.ModelNumber)
+        </div>
+        <div class="col">
+            @Html.DisplayNameFor(model => model.Price)
+        </div>
+        <div></div>
+    </div>
+
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="col">
+            @Html.DisplayFor(modelItem => item.Brand)
+        </div>
+        <div class="col">
+            @Html.DisplayFor(modelItem => item.ModelNumber)
+        </div>
+        <div class="col">
+            @Html.DisplayFor(modelItem => item.Price)
+        </div>
+    </div>
+    <div class="row">
+       @* made buttons*@
+        <div class="col">
+            <button class="button" id="edit">@Html.ActionLink("Edit", "Edit", new { id = item.ID })</button>
+            <button class="button" id="details">@Html.ActionLink("Details", "Details", new { id = item.ID })</button>
+            <button class="button" id="delete">@Html.ActionLink("Delete", "Delete", new { id = item.ID })</button>
+        </div>
+    </div>
+}
+
+</div>
+
+
